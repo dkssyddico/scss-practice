@@ -1,0 +1,20 @@
+%button {
+  cursor: pointer;
+  font-weight: 600;
+  outline: none;
+  border: 1px solid gainsboro;
+  font-size: $fontmini;
+  padding: 8px 24px;
+  background-color: transparent;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  margin-right: 8px;
+  transition: all 200ms linear;
+}
+
+%buttonHover {
+  background-color: black;
+  color: white;
+}
