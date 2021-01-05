@@ -14,4 +14,4 @@ Using Grid and Scss.
 
 ## 2021. Jan. 5th
 
-- clone : [] [https://tolv.dk/](https://tolv.dk/)
+- clone : [x] [https://tolv.dk/](https://tolv.dk/)
