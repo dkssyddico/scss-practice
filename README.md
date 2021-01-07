@@ -20,4 +20,8 @@ Photo Source : [https://source.unsplash.com/random]
 
 ## 2021. Jan. 6th
 
-- clone : [x] [https://rodicdavidson.co.uk/](https://rodicdavidson.co.uk/))
+- clone : [x] [https://rodicdavidson.co.uk/](https://rodicdavidson.co.uk/)
+
+## 2021. Jan. 7th
+
+- clone : [x] [https://beige.de/](https://beige.de/)
