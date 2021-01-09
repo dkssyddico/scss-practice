@@ -8,284 +8,265 @@
 @import '_variables';
 // font-family: 'Comfortaa', cursive;
 // font-family: 'Crimson Text', serif;
+
 body {
   width: 100%;
   height: 100vh;
+  background-color: white;
+  font-family: 'Nunito';
 }
 
-.main {
-  width: calc(100% - 180px);
-  font-family: 'Crimson Text', serif;
-  .header {
-    padding: 250px 60px 120px;
-    p {
-      text-align: left;
-      font-size: 75px;
-      width: 60%;
-      line-height: 1.2;
-    }
-  }
-  .picture {
-    padding: 100px;
-    height: 1000px;
-    background-image: url('https://source.unsplash.com/random');
-    background-position: center;
-    background-size: cover;
-  }
-  .market__info {
-    padding: 60px;
-    h2 {
-      font-size: 112px;
-      width: 40%;
-      margin-bottom: 60px;
-    }
-    .posts {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 60px;
-      img {
-        width: 100%;
-        margin-bottom: 30px;
-      }
-      p {
-        line-height: 1.3;
-        letter-spacing: 2px;
-      }
-    }
-  }
-  .event {
-    padding: 60px;
+.header {
+  margin: 0 45px;
+  .banner {
     display: flex;
-    flex-direction: column;
-    position: relative;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    border-bottom: none;
+    padding: 15px 0;
+    background-color: #682964;
+    color: white;
+  }
+  .menuRow__first,
+  .menuRow__second {
+    height: 60px;
+    font-weight: 800;
+  }
+  .menuRow__first {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    border: 1px solid black;
+    border-bottom: none;
+    .search,
     .title {
-      padding: 60px 0;
-      font-size: 100px;
-      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-right: 1px solid black;
+    }
+    .title {
+      font-size: 32px;
+    }
+    .detail {
+      border-right: none;
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       div {
         display: flex;
         justify-content: center;
         align-items: center;
-      }
-    }
-    .info {
-      border: 1px solid;
-      padding: 60px 0;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      border: 1px solid black;
-      div {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        h4 {
-          margin-bottom: 20px;
-        }
-        p {
-          font-family: 'Comfortaa', cursive;
-          line-height: 1.4;
-          width: 50%;
-          font-size: 14px;
-          font-weight: 500;
+        &:first-child {
+          border-right: 1px solid black;
         }
       }
     }
-    .button {
-      cursor: pointer;
-      position: absolute;
-      color: black;
-      background-color: white;
-      letter-spacing: 2px;
-      font-family: 'Comfortaa', cursive;
-      font-size: 14px;
-      text-decoration: none;
-      border: 1px solid black;
-      padding: 20px 50px;
-      top: 86%;
-      left: 45%;
-      text-align: center;
-      width: 100px;
-      &:hover {
-        color: whitesmoke;
-        background-color: black;
+  }
+  .menuRow__second {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border: 1px solid black;
+    div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-right: 1px solid black;
+      &:first-child {
+        color: blue;
+      }
+      &:last-child {
+        border-right: none;
       }
     }
   }
 }
 
-.location {
-  padding: 60px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 60px;
-  height: 340px;
-  div {
+.slide,
+.slide__two {
+  margin: 165px 45px;
+  display: flex;
+  .box {
     display: flex;
     justify-content: center;
-    align-items: center;
-    border: 1px dotted black;
-  }
-  .info {
-    h2 {
-      text-align: center;
-      font-size: 60px;
-      width: 50%;
+    margin-right: 10px;
+    animation: slide 15s infinite linear;
+    span {
+      text-transform: uppercase;
+      font-size: 20px;
+      font-weight: 700;
+      margin-right: 56px;
     }
   }
-  .map {
+}
+
+@keyframes slide {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+.main,
+.newArrival,
+.jeans {
+  margin: 0 45px 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h2 {
+    font-size: 36px;
+    margin-bottom: 60px;
+  }
+  .items {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    .item {
+      height: 700px;
+      border: 1px solid black;
+      border-right: none;
+      display: grid;
+      grid-template-rows: 4fr 1fr;
+      &:last-child {
+        border-right: 1px solid black;
+      }
+      .bgImg {
+        width: 100%;
+        background-image: url('https://source.unsplash.com/random');
+        background-position: center;
+        background-size: cover;
+      }
+      .item__detail {
+        padding: 20px;
+        P {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+  .shop {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 50px;
+    div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid black;
+      border-top: none;
+      border-right: none;
+      &:last-child {
+        border-right: 1px solid black;
+      }
+    }
+  }
+}
+
+.magazine {
+  margin: 0 45px 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h2 {
+    font-size: 60px;
+    font-weight: 700;
+    margin-bottom: 35px;
+  }
+  p {
+    margin-bottom: 60px;
+  }
+  .img {
+    width: 100%;
+    height: 100vh;
     background-image: url('https://source.unsplash.com/random');
     background-position: center;
     background-size: cover;
-  }
-}
-
-.ask {
-  padding: 60px;
-  div {
-    border-top: 1px double black;
-    border-bottom: 1px double black;
-    padding: 60px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    h2 {
-      font-size: 45px;
-      margin-bottom: 40px;
-    }
-    .button {
-      cursor: pointer;
-      color: black;
-      background-color: white;
-      letter-spacing: 2px;
-      font-family: 'Comfortaa', cursive;
-      font-size: 14px;
-      text-decoration: none;
-      border: 1px solid black;
-      padding: 20px 50px;
-      width: 100px;
-      transition: all 0.3s linear;
-      &:hover {
-        color: whitesmoke;
-        background-color: black;
-      }
-    }
-  }
-}
-
-.social {
-  padding: 60px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 60px;
-  div {
-    border: 1px dashed black;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 200px;
-    i {
-      font-size: 32px;
-      margin-bottom: 10px;
-    }
-    span {
-      font-size: 20px;
-    }
   }
 }
 
 .newsletter {
-  padding: 60px 0;
-  margin: 0 60px 60px;
-  border: 1px solid black;
-  padding: 30px 60px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 60px;
-  .stayUp {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    p {
-      font-size: 28px;
+  margin: 0 45px;
+  padding-bottom: 50px;
+  .first__container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    height: 170px;
+    .signup {
+      padding: 20px;
+      border: 1px solid black;
+      border-right: none;
+      h4 {
+        font-weight: 700;
+        margin-bottom: 20px;
+      }
+      .email {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        div {
+          border: 1px solid black;
+          padding: 10px;
+          border-right: none;
+          &:last-child {
+            border-right: 1px solid black;
+          }
+        }
+        .women,
+        .men {
+          text-align: center;
+        }
+      }
     }
-  }
-  .askEmail {
-    border: 1px solid black;
-    form {
-      width: 100%;
-      input {
-        width: 90%;
-        border: none;
-        padding: 20px 30px;
-        letter-spacing: 2px;
-        background-color: white;
-        outline: none;
-        &::placeholder {
-          color: black;
-          font-family: 'Crimson Text', serif;
-          font-weight: 500;
-          font-size: 24px;
+    .shopping {
+      padding: 20px;
+      border: 1px solid black;
+      border-right: none;
+      h4 {
+        font-weight: 700;
+        margin-bottom: 20px;
+      }
+      div {
+        display: flex;
+        ul {
+          margin-right: 60px;
+          li {
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+    .company {
+      padding: 20px;
+      border: 1px solid black;
+      h4 {
+        font-weight: 700;
+        margin-bottom: 20px;
+      }
+      div {
+        display: flex;
+        ul {
+          margin-right: 60px;
+          li {
+            margin-bottom: 10px;
+          }
         }
       }
     }
   }
-}
-
-.footer {
-  padding: 0 60px 120px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  font-family: 'Crimson Text', serif;
-  font-size: 18px;
-  .first {
+  .second__container {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: 1px solid black;
+    border-top: none;
     display: flex;
-    a {
-      margin-right: 40px;
-      color: black;
-      &:first-child {
-        text-decoration: none;
+    justify-content: space-between;
+    .social {
+      span:first-child {
+        margin-right: 30px;
       }
     }
-  }
-  .second {
-    text-align: right;
-  }
-}
-
-.aside {
-  position: fixed;
-  right: 0;
-  top: 0;
-  ul {
-    display: grid;
-    grid-template-columns: repeat(3, 60px);
-    grid-template-rows: 100vh;
-    text-align: center;
-    li {
-      h3 {
-        margin-top: 60px;
-        transform: rotateZ(90deg);
-        margin-bottom: 350px;
-      }
-      p {
-        font-family: 'Comfortaa', cursive;
-        transform: rotateZ(90deg);
-      }
-    }
-  }
-  .food {
-    background-color: $blue;
-  }
-  .retail {
-    background-color: $red;
-  }
-  .community {
-    background-color: $yellow;
   }
 }
