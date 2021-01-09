@@ -11,12 +11,10 @@
 body {
   width: 100%;
   height: 100vh;
-  display: grid;
-  grid-template-columns: 9fr 1fr;
 }
 
 .main {
-  width: 100%;
+  width: calc(100% - 180px);
   font-family: 'Crimson Text', serif;
   .header {
     padding: 250px 60px 120px;
@@ -28,6 +26,7 @@ body {
     }
   }
   .picture {
+    padding: 100px;
     height: 1000px;
     background-image: url('https://source.unsplash.com/random');
     background-position: center;
@@ -96,6 +95,7 @@ body {
       }
     }
     .button {
+      cursor: pointer;
       position: absolute;
       color: black;
       background-color: white;
@@ -106,12 +106,12 @@ body {
       border: 1px solid black;
       padding: 20px 50px;
       top: 86%;
-      left: 46%;
+      left: 45%;
       text-align: center;
-      a {
-        width: 80px;
-        text-decoration: none;
-        color: black;
+      width: 100px;
+      &:hover {
+        color: whitesmoke;
+        background-color: black;
       }
     }
   }
@@ -133,7 +133,7 @@ body {
     h2 {
       text-align: center;
       font-size: 60px;
-      width: 60%;
+      width: 50%;
     }
   }
   .map {
@@ -157,7 +157,8 @@ body {
       font-size: 45px;
       margin-bottom: 40px;
     }
-    a {
+    .button {
+      cursor: pointer;
       color: black;
       background-color: white;
       letter-spacing: 2px;
@@ -166,6 +167,12 @@ body {
       text-decoration: none;
       border: 1px solid black;
       padding: 20px 50px;
+      width: 100px;
+      transition: all 0.3s linear;
+      &:hover {
+        color: whitesmoke;
+        background-color: black;
+      }
     }
   }
 }
@@ -193,33 +200,31 @@ body {
 }
 
 .newsletter {
-  padding: 60px;
+  padding: 60px 0;
+  margin: 0 60px 60px;
+  border: 1px solid black;
+  padding: 30px 60px;
   display: grid;
-  .divide {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 60px;
+  .stayUp {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    p {
+      font-size: 28px;
+    }
+  }
+  .askEmail {
     border: 1px solid black;
-    padding: 30px 60px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 60px;
-    div {
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
+    form {
       width: 100%;
-    }
-    .stayUp {
-      p {
-        font-size: 28px;
-      }
-    }
-    .askEmail {
-      border: 1px solid black;
       input {
-        width: 100%;
+        width: 90%;
         border: none;
         padding: 20px 30px;
         letter-spacing: 2px;
-        background-color: transparent;
+        background-color: white;
         outline: none;
         &::placeholder {
           color: black;
@@ -233,8 +238,7 @@ body {
 }
 
 .footer {
-  padding: 0 60px;
-  margin-bottom: 40px;
+  padding: 0 60px 120px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   font-family: 'Crimson Text', serif;
@@ -255,24 +259,24 @@ body {
 }
 
 .aside {
-  font-family: 'Comfortaa', cursive;
-  background-color: chocolate;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
   position: fixed;
+  right: 0;
   top: 0;
-  left: 90%;
-  height: 100%;
-  section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    h3 {
-      margin-top: 40px;
-    }
-    span {
-      margin-top: 400px;
-      transform: rotate(90deg);
+  ul {
+    display: grid;
+    grid-template-columns: repeat(3, 60px);
+    grid-template-rows: 100vh;
+    text-align: center;
+    li {
+      h3 {
+        margin-top: 60px;
+        transform: rotateZ(90deg);
+        margin-bottom: 350px;
+      }
+      p {
+        font-family: 'Comfortaa', cursive;
+        transform: rotateZ(90deg);
+      }
     }
   }
   .food {
