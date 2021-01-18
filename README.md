@@ -34,8 +34,8 @@ Photo Source : [https://source.unsplash.com/random]
 
 - [x] [https://wonhundred.com/](https://wonhundred.com/)
 
-## 2021. Jan. 13th, 14th
+## 2021. Jan. 18th
 
 Found more well-made grid-based website.
 
-- [ ] [https://www.whatisblik.com/](https://www.whatisblik.com/)
+- [x] [https://www.whatisblik.com/](https://www.whatisblik.com/)
