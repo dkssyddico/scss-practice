@@ -39,3 +39,7 @@ Photo Source : [https://source.unsplash.com/random]
 Found more well-made grid-based website.
 
 - [x] [https://www.whatisblik.com/](https://www.whatisblik.com/)
+
+## 2021. Jan. 20th
+
+- [x] [https://curry.cafe/](https://curry.cafe/)
