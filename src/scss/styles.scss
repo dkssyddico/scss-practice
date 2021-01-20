@@ -111,11 +111,10 @@ main {
 .info .location,
 .info .menu,
 .info .shop {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-weight: 700;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
   font-style: italic;
+  font-weight: 700;
 }
 
 .newsletter {
@@ -123,23 +122,17 @@ main {
   background-color: white;
   height: 100%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
 }
 
-.container {
-  white-space: nowrap;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.container span {
-  width: max-content;
+.newsletter div {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
   font-size: 1vw;
   font-weight: 700;
-  color: #ff6c2c;
-  transform: rotate(270deg);
+  transform: rotate(180deg);
   letter-spacing: 2px;
   font-style: italic;
 }
@@ -231,8 +224,7 @@ main {
 
 .order div,
 .reservations div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
   font-style: italic;
 }
