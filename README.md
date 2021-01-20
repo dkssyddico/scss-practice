@@ -43,3 +43,7 @@ Found more well-made grid-based website.
 ## 2021. Jan. 20th
 
 - [x] [https://curry.cafe/](https://curry.cafe/)
+
+## 2021. Jan. 20th
+
+- [ ] [https://nottoscale.tv/](https://nottoscale.tv/)

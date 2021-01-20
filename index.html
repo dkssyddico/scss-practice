@@ -3,91 +3,296 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Min's Clone Coding" />
+    <meta name="author" content="Min" />
+    <link rel="icon" type="image/png" href="logo.png" />
     <link rel="stylesheet" href="dest/css/styles.css" />
-    <title>Blick Clone</title>
+    <title>Min's Clone Coding</title>
     <script src="https://kit.fontawesome.com/dee6d699c6.js" crossorigin="anonymous"></script>
     <script src="./src/js/main.js" defer></script>
   </head>
   <body>
-    <main>
-      <section class="row">
-        <ul class="curry-cafe">
-          <li>
-            CURRY CAFE! CURRY CAFE! FLEMINGTON & NORTHCOTE! NUMBER ONE BEST QUALITY! VEG & NON. VEG!
-            CURRY CAFE!
-          </li>
-          <li>
-            CURRY CAFE! CURRY CAFE! FLEMINGTON & NORTHCOTE! NUMBER ONE BEST QUALITY! VEG & NON. VEG!
-            CURRY CAFE!
-          </li>
-          <li>
-            CURRY CAFE! CURRY CAFE! FLEMINGTON & NORTHCOTE! NUMBER ONE BEST QUALITY! VEG & NON. VEG!
-            CURRY CAFE!
-          </li>
-        </ul>
-      </section>
-      <section class="row">
-        <div class="column">
-          <div class="row--small info">
-            <div class="location">location</div>
-            <p>✦</p>
-            <div class="menu">menu</div>
-            <p>✦</p>
-            <div class="shop">shop</div>
+    <!-- Nav -->
+    <nav>
+      <div class="nav__logo">
+        <img src="logo.png" alt="" />
+        <h1>Not To Scale</h1>
+      </div>
+      <ul class="nav__menu">
+        <li class="menu__item">Work</li>
+        <li class="menu__item">Director</li>
+        <li class="menu__item">Case Studies</li>
+        <li class="menu__item">Expertise</li>
+        <li class="menu__item">Contact</li>
+      </ul>
+      <div class="nav__search">
+        <i class="fas fa-search"></i>
+      </div>
+    </nav>
+
+    <!-- header -->
+    <header>
+      <div class="header__bgImg"></div>
+      <div class="header__details">
+        <div class="details__description">
+          <h3 class="category">Commercial</h3>
+          <h2 class="platform">Facebook</h2>
+          <h2 class="creator">Ronda</h2>
+          <p class="text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, quibusdam?
+          </p>
+        </div>
+        <div class="details__btns">
+          <div class="viewProject">View project</div>
+          <div class="go-left-tbn"><</div>
+          <div class="go-right-tbn">></div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Introduction -->
+    <section class="dark-container">
+      <h2 class="text">
+        We are an international, award winning, film and animation studio, with an established
+        reputation for creating acclaimed content for the world’s most successful brands.
+      </h2>
+      <a href="#" class="link">Find out more</a>
+    </section>
+
+    <!-- Two Galleries-->
+    <section class="gallery-first">
+      <div class="column__first">
+        <div class="row__first row">
+          <div class="news">
+            <h3>News</h3>
+            <p>Virtual Ventures With Santander!</p>
+            <div>
+              <img src="logo.png" alt="" />
+              <h3>News</h3>
+            </div>
           </div>
-          <div class="row--small newsletter">
-            🔥
-            <div>spicy newletter</div>
+          <div class="img"></div>
+        </div>
+        <div class="row"></div>
+        <div class="row">
+          <h3>Music</h3>
+          <h2>The Beatles</h2>
+          <h2>Alasdair & Jock</h2>
+        </div>
+      </div>
+      <div class="column__second">
+        <div class="row"></div>
+        <div class="row">
+          <h3>Music</h3>
+          <h2>The Beatles</h2>
+          <h2>Alasdair & Jock</h2>
+        </div>
+        <div class="row">
+          <div class="news">
+            <h3>News</h3>
+            <p>Virtual Ventures With Santander!</p>
+            <div>
+              <img src="logo.png" alt="" />
+              <h3>News</h3>
+            </div>
           </div>
-          <div class="row--small social">
-            <i class="fab fa-facebook-square"></i>
-            <i class="fab fa-instagram"></i>
+          <div class="img"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery-second">
+      <div class="column__first">
+        <div class="row__first row">
+          <div class="news">
+            <h3>News</h3>
+            <p>Virtual Ventures With Santander!</p>
+            <div>
+              <img src="logo.png" alt="" />
+              <h3>News</h3>
+            </div>
+          </div>
+          <div class="img"></div>
+        </div>
+        <div class="row"></div>
+        <div class="row">
+          <h3>Music</h3>
+          <h2>The Beatles</h2>
+          <h2>Alasdair & Jock</h2>
+        </div>
+      </div>
+      <div class="column__second">
+        <div class="row"></div>
+        <div class="row">
+          <h3>Music</h3>
+          <h2>The Beatles</h2>
+          <h2>Alasdair & Jock</h2>
+        </div>
+        <div class="row">
+          <div class="news">
+            <h3>News</h3>
+            <p>Virtual Ventures With Santander!</p>
+            <div>
+              <img src="logo.png" alt="" />
+              <h3>News</h3>
+            </div>
+          </div>
+          <div class="img"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Passion -->
+    <section class="dark-container">
+      <h2 class="text">
+        <span>We are passionate </span>about producing films that engage and excite our audience.
+      </h2>
+      <a href="#" class="link">Find out more</a>
+    </section>
+
+    <!-- Case Study -->
+    <!-- section will have background img, position relative-->
+    <section class="casestudy">
+      <!-- container will have position absolute and grid -->
+      <div class="container">
+        <div class="mainBox">
+          <h3>Case Study</h3>
+          <h2>Zulily</h2>
+        </div>
+        <div class="subbox">
+          <a href="#">View Case Study</a>
+        </div>
+      </div>
+      <!-- below div will be used for grid container -->
+      <div class="empty"></div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact">
+      <div class="get-in-touch">
+        <h3>Get in touch...</h3>
+      </div>
+      <!-- grid -->
+      <div class="locations">
+        <div class="location">
+          <h4>London</h4>
+          <p class="address">
+            98A Curtain Rd
+            <br />
+            Shoreditch
+            <br />
+            London
+            <br />
+            EC2A 3AA
+          </p>
+          <p class="number-email">
+            + 44 (0)20 7734 4575
+            <br />
+            hello@nottoscale.tv
+          </p>
+          <div class="socials">
+            <div class="social">
+              <i class="fab fa-twitter"></i>
+            </div>
+            <div class="social">
+              <i class="fab fa-facebook-f"></i>
+            </div>
+            <div class="social">
+              <i class="fab fa-instagram"></i>
+            </div>
           </div>
         </div>
-        <div class="column imgs">
-          <div class="chat">
-            <i class="fas fa-comment"></i>
-          </div>
-          <div class="logo">
-            <img
-              src="https://curry.cafe/wp-content/themes/curry.cafe/static/images/logoWhite.png"
-              alt=""
-            />
-          </div>
-          <div class="bottomImgs">
-            <img src="https://curry.cafe/wp-content/uploads/2018/11/leader-10.jpg" alt="" />
-            <img src="https://curry.cafe/wp-content/uploads/2018/11/leader-02.jpg" alt="" />
+        <div class="location">
+          <h4>London</h4>
+          <p class="address">
+            98A Curtain Rd
+            <br />
+            Shoreditch
+            <br />
+            London
+            <br />
+            EC2A 3AA
+          </p>
+          <p class="number-email">
+            + 44 (0)20 7734 4575
+            <br />
+            hello@nottoscale.tv
+          </p>
+          <div class="socials">
+            <div class="social">
+              <i class="fab fa-twitter"></i>
+            </div>
+            <div class="social">
+              <i class="fab fa-facebook-f"></i>
+            </div>
+            <div class="social">
+              <i class="fab fa-instagram"></i>
+            </div>
           </div>
         </div>
-        <div class="column right-menu">
-          <div class="order">
-            <p class="sun">☀︎</p>
-            <div>order</div>
-            <p class="sun">☀︎</p>
-          </div>
-          <div class="reservations">
-            <p class="sun">✷</p>
-            <div>reservations</div>
-            <p class="sun">✷</p>
+        <div class="location">
+          <h4>London</h4>
+          <p class="address">
+            98A Curtain Rd
+            <br />
+            Shoreditch
+            <br />
+            London
+            <br />
+            EC2A 3AA
+          </p>
+          <p class="number-email">
+            + 44 (0)20 7734 4575
+            <br />
+            hello@nottoscale.tv
+          </p>
+          <div class="socials">
+            <div class="social">
+              <i class="fab fa-twitter"></i>
+            </div>
+            <div class="social">
+              <i class="fab fa-facebook-f"></i>
+            </div>
+            <div class="social">
+              <i class="fab fa-instagram"></i>
+            </div>
           </div>
         </div>
-      </section>
-      <section class="row">
-        <ul class="stay-spicy">
-          <li>
-            STAY SPICY — NUMBER ONE BEST QUALITY! EVERY DAY OPEN! FLEMINGTON & NORTHCOTE! HOME
-            DELIVERY ~ NUMBER ONE BEST QUALITY!
-          </li>
-          <li>
-            STAY SPICY — NUMBER ONE BEST QUALITY! EVERY DAY OPEN! FLEMINGTON & NORTHCOTE! HOME
-            DELIVERY ~ NUMBER ONE BEST QUALITY!
-          </li>
-          <li>
-            STAY SPICY — NUMBER ONE BEST QUALITY! EVERY DAY OPEN! FLEMINGTON & NORTHCOTE! HOME
-            DELIVERY ~ NUMBER ONE BEST QUALITY!
-          </li>
-        </ul>
-      </section>
-    </main>
+        <div class="location">
+          <h4>London</h4>
+          <p class="address">
+            98A Curtain Rd
+            <br />
+            Shoreditch
+            <br />
+            London
+            <br />
+            EC2A 3AA
+          </p>
+          <p class="number-email">
+            + 44 (0)20 7734 4575
+            <br />
+            hello@nottoscale.tv
+          </p>
+          <div class="socials">
+            <div class="social">
+              <i class="fab fa-twitter"></i>
+            </div>
+            <div class="social">
+              <i class="fab fa-facebook-f"></i>
+            </div>
+            <div class="social">
+              <i class="fab fa-instagram"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- bottom -->
+    <section class="bottom">
+      <div>Join our Mailing List</div>
+      <div>&copy; dkssyddico 2021 All Rights Reserved</div>
+    </section>
   </body>
 </html>
