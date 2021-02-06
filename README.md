@@ -46,4 +46,8 @@ Found more well-made grid-based website.
 
 ## 2021. Jan. 20th
 
-- [ ] [https://nottoscale.tv/](https://nottoscale.tv/)
+- [x] [https://nottoscale.tv/](https://nottoscale.tv/)
+
+## 2021. Feb. 6th
+
+- [ ] [https://www.pinterest.co.kr/pin/14988611239458562/](https://www.pinterest.co.kr/pin/14988611239458562/)
