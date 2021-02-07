@@ -50,4 +50,8 @@ Found more well-made grid-based website.
 
 ## 2021. Feb. 6th
 
-- [ ] [https://www.pinterest.co.kr/pin/14988611239458562/](https://www.pinterest.co.kr/pin/14988611239458562/)
+- [x] [https://www.pinterest.co.kr/pin/14988611239458562/](https://www.pinterest.co.kr/pin/14988611239458562/)
+
+## 2021. Feb. 7th
+
+- [x] travel website [https://dribbble.com/shots/14677571-Doland-Itinerary-Travel-Planner](https://dribbble.com/shots/14677571-Doland-Itinerary-Travel-Planner)
