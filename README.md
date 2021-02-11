@@ -55,3 +55,7 @@ Found more well-made grid-based website.
 ## 2021. Feb. 7th
 
 - [x] travel website [https://dribbble.com/shots/14677571-Doland-Itinerary-Travel-Planner](https://dribbble.com/shots/14677571-Doland-Itinerary-Travel-Planner)
+
+## 2021. Feb. 11st
+
+- [ ] travel website 2 [https://dribbble.com/shots/10474951-Creative-Travel-Website-Design?utm_source=pinterest&utm_campaign=pinterest_shot&utm_content=Creative%20Travel%20Website%20Design&utm_medium=Social_Share](https://dribbble.com/shots/10474951-Creative-Travel-Website-Design?utm_source=pinterest&utm_campaign=pinterest_shot&utm_content=Creative%20Travel%20Website%20Design&utm_medium=Social_Share)
