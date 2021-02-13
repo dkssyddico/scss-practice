@@ -58,4 +58,8 @@ Found more well-made grid-based website.
 
 ## 2021. Feb. 11st
 
-- [ ] travel website 2 [https://dribbble.com/shots/10474951-Creative-Travel-Website-Design?utm_source=pinterest&utm_campaign=pinterest_shot&utm_content=Creative%20Travel%20Website%20Design&utm_medium=Social_Share](https://dribbble.com/shots/10474951-Creative-Travel-Website-Design?utm_source=pinterest&utm_campaign=pinterest_shot&utm_content=Creative%20Travel%20Website%20Design&utm_medium=Social_Share)
+- [x] travel website 2 [https://dribbble.com/shots/10474951-Creative-Travel-Website-Design?utm_source=pinterest&utm_campaign=pinterest_shot&utm_content=Creative%20Travel%20Website%20Design&utm_medium=Social_Share](https://dribbble.com/shots/10474951-Creative-Travel-Website-Design?utm_source=pinterest&utm_campaign=pinterest_shot&utm_content=Creative%20Travel%20Website%20Design&utm_medium=Social_Share)
+
+## 2021. Feb. 12st
+
+- [ ] Open [https://o-p-e-n.com/](https://o-p-e-n.com/)
