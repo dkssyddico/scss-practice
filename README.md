@@ -62,4 +62,8 @@ Found more well-made grid-based website.
 
 ## 2021. Feb. 12st
 
-- [ ] Open [https://o-p-e-n.com/](https://o-p-e-n.com/)
+- [x] Open [https://o-p-e-n.com/](https://o-p-e-n.com/)
+
+## 2021. Feb. 13th
+
+- [ ] Forti Goods [https://fortigoods.com/](https://fortigoods.com/)

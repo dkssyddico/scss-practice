@@ -5,14 +5,84 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap');
 // font-family: 'Merriweather', serif;
 // font-family: 'Open Sans', sans-serif;
+// font-family: 'Playfair Display', serif;
+// font-family: 'Comfortaa', cursive;
+// font-family: 'Crimson Text', serif;
 
 @import '_reset';
 @import '_variables';
 @import '_extends';
-// font-family: 'Comfortaa', cursive;
-// font-family: 'Crimson Text', serif;
+
+img {
+  width: 50px;
+  height: 50px;
+}
+
+button {
+  all: unset;
+  font-size: $fontRegular;
+  cursor: pointer;
+}
+
+a {
+  all: unset;
+  color: black;
+  font-size: $fontRegular;
+}
+
+input {
+  all: unset;
+}
+
+.btn-green {
+  background-color: $mossGreen;
+  color: $yellow;
+  width: 250px;
+  height: 60px;
+  text-align: center;
+  letter-spacing: 1px;
+  font-size: $fontRegular;
+  border: 1px $mossGreen solid;
+  cursor: pointer;
+  transition: all 0.3s linear;
+  &:hover {
+    background-color: $yellow;
+    color: $mossGreen;
+  }
+}
+
+h1 {
+  font-size: $fontXLarge;
+  color: $mossGreen;
+}
+
+h3 {
+  font-size: $fontMedium;
+}
+
+h5 {
+  font-size: $fontRegular;
+}
+
+li {
+  font-size: $fontRegular;
+}
+
+p {
+  font-size: $fontRegular;
+}
+
+.hidden {
+  display: none;
+}
+
+.bgImg {
+  background-position: center center;
+  background-size: cover;
+}
 
 * {
   box-sizing: border-box;
@@ -21,134 +91,400 @@
 body {
   width: 100%;
   height: 100vh;
-  font-family: 'Open Sans', sans-serif;
-  color: white;
-  background: linear-gradient(to top left, #647122, #050505);
-  display: grid;
-  grid-template-rows: 1fr 4fr;
+  font-family: 'Crimson Text', serif;
+  background-color: #fffdf5;
+  color: $mossGreen;
 }
 
-.header {
-  padding: 20px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  .header-column:first-child {
-    width: 100%;
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 50px;
+  border-bottom: 1px $mossGreen solid;
+  width: 100%;
+  position: fixed;
+  z-index: 0;
+  top: 0;
+  max-height: 100px;
+  background-color: $beige;
+  .nav-menu {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
-    .circle {
-      width: 25px;
-      height: 25px;
-      background-color: white;
-      border-radius: 50%;
-    }
-    .js-clock {
-      font-size: 12px;
-      letter-spacing: 1px;
+    align-items: center;
+    h3 {
+      font-size: $fontRegular;
       cursor: pointer;
+      text-transform: capitalize;
+      letter-spacing: 1px;
+      &:hover {
+        border-bottom: 1px $mossGreen solid;
+      }
     }
-  }
-  .header-column:nth-child(2) {
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    h1 {
-      font-size: 72px;
-    }
-    .e {
-      margin-left: 15px;
+    h3:first-child {
       margin-right: 30px;
     }
   }
-  .header-column:last-child {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    h5 {
-      font-size: 12px;
-      letter-spacing: 1px;
-      text-transform: uppercase;
+  .nav-title {
+    font-weight: $weightBold;
+    letter-spacing: 1px;
+    transform: translateY(30%);
+  }
+  .nav-user {
+    i {
+      font-size: $fontRegular;
       cursor: pointer;
-      &:hover {
-        text-decoration: underline;
-      }
+    }
+    i:first-child {
+      margin-right: 30px;
     }
   }
 }
 
-.main {
+.header {
+  margin-top: 90px;
+  height: 100vh;
   display: grid;
-  grid-template-rows: 0.5fr 1fr 0.7fr;
-  padding: 20px;
-  .main-row:first-child {
+  grid-template-columns: repeat(2, 50%);
+  .header-text {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h1 {
+      width: 80%;
+      font-size: $fontXXLarge;
+    }
     p {
-      width: 26%;
-      line-height: 1.3;
-      font-size: 13px;
+      margin: 30px 0;
     }
   }
-  .cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    .card {
-      display: flex;
-      flex-direction: column;
-      .card-num {
-        font-size: 12px;
+  .bgImg {
+    background-image: url('https://source.unsplash.com/random/1');
+  }
+}
+
+.main-board {
+  height: 200vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  .main-img1 {
+    background-image: url('https://source.unsplash.com/random/2');
+  }
+  .main-img2 {
+    background-image: url('https://source.unsplash.com/random/3');
+  }
+  .main-text {
+    padding: 100px 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    p {
+      margin: 30px 0;
+      line-height: 1.2;
+    }
+  }
+}
+
+.shopping {
+  padding: 60px;
+  height: 140vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $lightPink;
+  h1 {
+    margin-bottom: 60px;
+  }
+  .shopping-items {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    .item-card {
+      width: 32%;
+      border: 1px $mossGreen solid;
+      display: grid;
+      grid-template-rows: 6fr 3fr 1fr;
+      background-color: $mossGreen;
+      gap: 1px;
+      .item-detail {
+        padding: 20px 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        background-color: $beige;
+      }
+      .item-button {
+        background-color: $beige;
+        // padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: $fontRegular;
+        cursor: pointer;
+        text-transform: capitalize;
+        transition: all 0.3s ease-in;
         letter-spacing: 1px;
-      }
-      .card-container {
-        width: 100%;
-        height: 70%;
-        overflow: hidden;
-      }
-      .card-img {
-        width: 100%;
-        height: 100%;
-        background-position: center center;
-        background-size: cover;
         &:hover {
-          filter: blur(3px);
+          background-color: $yellow;
         }
       }
-      .card-title {
-        font-size: 18px;
-        margin: 8px 0;
-      }
-      .card-tags {
-        font-size: 12px;
-      }
     }
   }
-  .main-row:last-child {
+}
+
+.item-img1 {
+  background-image: url('https://source.unsplash.com/random/5');
+}
+.item-img2 {
+  background-image: url('https://source.unsplash.com/random/6');
+}
+.item-img3 {
+  background-image: url('https://source.unsplash.com/random/7');
+}
+
+.about {
+  height: 100vh;
+  padding: 60px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  .about-img {
+    background-image: url('https://source.unsplash.com/random/8');
+    border: 1px $mossGreen solid;
+  }
+  .about-text {
+    padding: 60px;
     display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    padding-bottom: 10px;
-    .title-classes {
-      h1 {
-        font-size: 70px;
-        letter-spacing: 5px;
-      }
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    p {
+      margin: 30px;
+      line-height: 1.2;
     }
-    .live {
-      p {
-        font-size: 12px;
-        line-height: 1.5;
-        padding-right: 20px;
-        padding-bottom: 10px;
+  }
+}
+
+.carousel {
+  height: 130vh;
+  background-color: $lightPink;
+  padding: 60px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  .slider-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .btn-arrow {
+      width: 50px;
+      height: 50px;
+      background-color: $beige;
+      display: flex;
+      border-radius: 50%;
+      border: 1px $mossGreen solid;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+    .slider {
+      width: 80%;
+      height: 90vh;
+      border: 1px $mossGreen solid;
+      .slider-item {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        height: 100%;
+        .slider-img {
+          background-image: url('https://source.unsplash.com/random/9');
+        }
+        .slider-text {
+          padding: 60px;
+          background-color: $deepGreen;
+          color: $beige;
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          p {
+            font-size: $fontLarge;
+          }
+          h5 {
+            margin: 40px 0 20px;
+          }
+          a {
+            color: $beige;
+            padding-bottom: 5px;
+            border-bottom: 1px $beige solid;
+            cursor: pointer;
+            transition: all 0.3s ease-in;
+            &:hover {
+              border-color: #fffdf5b6;
+            }
+          }
+        }
       }
     }
   }
 }
 
-.img1 {
-  background-image: url('https://source.unsplash.com/random/1');
+.newsletter {
+  height: 90vh;
+  padding: 80px 120px;
+  background-position: center center;
+  background-size: cover;
+  background-image: url('https://source.unsplash.com/random/10');
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .newsletter-container {
+    height: 100%;
+    width: 100%;
+    background-color: $beige;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    p {
+      margin: 30px 0;
+    }
+    form {
+      width: 50%;
+      // height: 80px;
+      display: grid;
+      grid-template-columns: 3fr 1fr;
+      input {
+        border: 1px $mossGreen solid;
+        border-right: none;
+        font-family: 'Crimson Text', serif;
+        font-size: $fontRegular;
+        padding-left: 20px;
+      }
+      button {
+        background-color: $mossGreen;
+        color: $yellow;
+        width: 100%;
+        text-align: center;
+        letter-spacing: 1px;
+        font-size: $fontRegular;
+        border: 1px $mossGreen solid;
+        cursor: pointer;
+        transition: all 0.3s linear;
+        &:hover {
+          background-color: $yellow;
+          color: $mossGreen;
+        }
+      }
+    }
+  }
 }
-.img2 {
-  background-image: url('https://source.unsplash.com/random/2');
+
+.footer {
+  display: grid;
+  grid-template-rows: 2.5fr 1fr;
+  color: $beige;
+  .footer-row {
+    background-color: $mossGreen;
+  }
+  .footer-top {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    border-bottom: 0.1px gainsboro solid;
+    .top-left {
+      padding: 60px;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      height: 100%;
+      ul {
+        li {
+          margin-bottom: 20px;
+          text-transform: capitalize;
+          font-size: $fontRegular;
+          letter-spacing: 1px;
+        }
+        .grey {
+          color: rgba(220, 220, 220, 0.589);
+        }
+        .email {
+          text-transform: none;
+        }
+      }
+      .socials i {
+        transition: all 0.3s linear;
+        cursor: pointer;
+        &:hover {
+          color: $yellow;
+        }
+      }
+      .socials i:nth-child(2) {
+        margin: 0 10px;
+      }
+    }
+    .top-right {
+      padding: 60px;
+      h3 {
+        font-size: $fontRegular;
+        margin-bottom: 20px;
+      }
+      form {
+        width: 100%;
+        height: 50px;
+        border: 1px $beige solid;
+        display: grid;
+        grid-template-columns: 7fr 1fr;
+        background-color: $beige;
+        gap: 1px;
+        input {
+          background-color: $mossGreen;
+          font-size: $fontRegular;
+          padding-left: 20px;
+        }
+        button {
+          background-color: $mossGreen;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          transition: all 0.3s linear;
+          cursor: pointer;
+          &:hover {
+            background-color: $yellow;
+            color: $mossGreen;
+          }
+        }
+      }
+    }
+  }
 }
-.img3 {
-  background-image: url('https://source.unsplash.com/random/3');
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 50px;
+  .bottom-creator {
+    display: flex;
+    align-items: center;
+    h5:last-child {
+      text-transform: capitalize;
+      margin-left: 30px;
+    }
+  }
+  .bottom-icons i {
+    font-size: $fontLarge;
+  }
+  .bottom-icons i:nth-child(2) {
+    margin: 0 20px;
+  }
 }

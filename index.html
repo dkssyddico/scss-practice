@@ -9,68 +9,205 @@
     <link rel="stylesheet" href="dest/css/styles.css" />
     <title>Min's Clone Coding</title>
     <script src="https://kit.fontawesome.com/dee6d699c6.js" crossorigin="anonymous"></script>
-    <script src="./src/js/main.js" defer></script>
+    <!-- <script src="./src/js/main.js" defer></script> -->
   </head>
   <body>
+    <!-- nav -->
+    <nav class="nav">
+      <div class="nav-column nav-menu">
+        <h3>Shop goods</h3>
+        <h3>about</h3>
+      </div>
+      <div class="nav-column">
+        <h1 class="nav-title">Forti Goods</h1>
+      </div>
+      <div class="nav-column nav-user">
+        <i class="fas fa-user"></i>
+        <i class="fas fa-shopping-bag"></i>
+      </div>
+    </nav>
+    <!-- header -->
     <header class="header">
-      <div class="header-column">
-        <div class="circle"></div>
-        <div class="js-clock short">11:22 PM KST</div>
-        <div class="empty"></div>
-      </div>
-      <div class="header-column">
-        <h1 class="header-title">Op<span class="e">e</span> n</h1>
-      </div>
-      <div class="header-column">
-        <h5 class="header-signUp">sign up</h5>
-      </div>
+      <section class="header-text">
+        <h1>A new high in furniture design.</h1>
+        <p>Safe and stylish cannabis storage.</p>
+        <button class="btn-green">Shop Goods</button>
+      </section>
+      <section class="header-img bgImg"></section>
     </header>
-    <main class="main">
-      <section class="main-row">
+
+    <!-- main section -->
+    <section class="main-board">
+      <div class="main-img1 bgImg"></div>
+      <div class="main-text1 main-text">
+        <h1>
+          Matches your lifestyle, <br />
+          and your space.
+        </h1>
         <p>
-          Our classes are a new take on mindfulness. A blend of methodologies, of the old and the
-          new — designed to awaken your senses, quiet the chatter, and bring you to the present
-          moment
+          Customize your Forti piece to best match your home, <br />
+          and your needs.
         </p>
-      </section>
-      <section class="main-row cards">
-        <div class="card">
-          <h4 class="card-num">01</h4>
-          <div class="card-container">
-            <div class="card-img img1"></div>
+        <button class="btn-green">Shop Goods</button>
+      </div>
+      <div class="main-text2 main-text">
+        <h1>
+          Designed and made to <br />
+          last in the Midwest.
+        </h1>
+        <p>
+          We design quality, functional furniture for safe and <br />
+          responsible cannabis use within the home.
+        </p>
+      </div>
+      <div class="main-img2 bgImg"></div>
+    </section>
+
+    <!-- shopping section -->
+    <section class="shopping">
+      <h1>
+        Out of the shoebox, <br />
+        and into the home.
+      </h1>
+      <div class="shopping-items">
+        <div class="item-card">
+          <div class="item-img item-img1 bgImg"></div>
+          <div class="item-detail">
+            <h3>Entertainers</h3>
+            <p>
+              For larger collections and people <br />
+              who love to share.
+            </p>
           </div>
-          <h2 class="card-title">Meditate</h2>
-          <h3 class="card-tags">SOUND + MEDITATION + BREATHWORK</h3>
+          <div class="item-button">shop all</div>
         </div>
-        <div class="card">
-          <h4 class="card-num">02</h4>
-          <div class="card-container">
-            <div class="card-img img2"></div>
+        <div class="item-card">
+          <div class="item-img item-img2 bgImg"></div>
+          <div class="item-detail">
+            <h3>Entertainers</h3>
+            <p>
+              For larger collections and people <br />
+              who love to share.
+            </p>
           </div>
-          <h2 class="card-title">Move</h2>
-          <h3 class="card-tags">YOGA + BREATHWORK + MUSIC</h3>
+          <div class="item-button">shop all</div>
         </div>
-        <div class="card">
-          <h4 class="card-num">03</h4>
-          <div class="card-container">
-            <div class="card-img img3"></div>
+        <div class="item-card">
+          <div class="item-img item-img3 bgImg"></div>
+          <div class="item-detail">
+            <h3>Entertainers</h3>
+            <p>
+              For larger collections and people <br />
+              who love to share.
+            </p>
           </div>
-          <h2 class="card-title">Breathe</h2>
-          <h3 class="card-tags">BREATHWORK + MEDITATION + MUSIC</h3>
+          <div class="item-button">shop all</div>
         </div>
-      </section>
-      <section class="main-row">
-        <div class="empty"></div>
-        <div class="title-classes">
-          <h1>Classes</h1>
+      </div>
+    </section>
+
+    <!-- about -->
+    <section class="about">
+      <div class="about-img bgImg"></div>
+      <div class="about-text">
+        <h1>Cannabis grew up, and so did we.</h1>
+        <p>Sustainably made and manufactured cannabis furniture for the modern home.</p>
+        <button class="btn-green">About Forti</button>
+      </div>
+    </section>
+
+    <!-- carousel -->
+    <section class="carousel">
+      <h1>We're in good company</h1>
+      <div class="slider-container">
+        <button class="btn-left btn-arrow">
+          <i class="fas fa-arrow-left"></i>
+        </button>
+        <div class="slider">
+          <div class="slider-item">
+            <div class="slider-img bgImg"></div>
+            <div class="slider-text">
+              <p>
+                When my niece is over,
+                <br />
+                I don’t have to worry about her
+                <br />
+                getting into my gummies.
+              </p>
+              <h5>Tess</h5>
+              <a href="" class="underline">Eleanor in Oak & Brass</a>
+            </div>
+          </div>
         </div>
-        <div class="live">
-          <p>
-            LIVE in 31 minutes <br />Move - Ally Maz <br />
-            12:00 to 12:45 AM
-          </p>
+        <button class="btn-right btn-arrow">
+          <i class="fas fa-arrow-right"></i>
+        </button>
+      </div>
+      <div class="circles">
+        <div class="circle circle1"></div>
+        <div class="circle circle2"></div>
+        <div class="circle circle3"></div>
+      </div>
+    </section>
+
+    <!-- newsletter -->
+    <section class="newsletter">
+      <div class="newsletter-container">
+        <h1>Subscribe to our newsletter.</h1>
+        <p>Perfect for stoned Sunday mornings.</p>
+        <form action="" class="newsletter-form">
+          <input type="text" class="newsletter-input" placeholder="Enter email here" />
+          <button class="btn-green">Subscribe</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="footer">
+      <div class="footer-row footer-top">
+        <div class="top-left">
+          <img src="logo.png" alt="" />
+          <ul class="footer-menu">
+            <li>shop goods</li>
+            <li>about</li>
+            <li>blog</li>
+          </ul>
+          <ul class="footer-menu">
+            <li>contact</li>
+            <li>legal</li>
+            <li>web app</li>
+          </ul>
+          <ul class="footer-contact">
+            <li class="grey">contact us</li>
+            <li class="email">dkssyddico@naver.com</li>
+            <li>
+              <div class="socials">
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-facebook-square"></i>
+                <i class="fab fa-pinterest"></i>
+              </div>
+            </li>
+          </ul>
         </div>
-      </section>
-    </main>
+        <div class="top-right">
+          <h3>SUBSCRIBE TO OUR NEWSLETTER</h3>
+          <form action="" class="footer-form">
+            <input type="text" class="footer-input" placeholder="Enter email here" />
+            <button><i class="fas fa-arrow-right"></i></button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-row footer-bottom">
+        <div class="bottom-column bottom-creator">
+          <h5>2021 &copy; dkssyddico</h5>
+          <h5>Thanks forti goods</h5>
+        </div>
+        <div class="bottom-column bottom-icons">
+          <i class="fab fa-cc-visa"></i>
+          <i class="fab fa-cc-mastercard"></i>
+          <i class="fab fa-cc-discover"></i>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
