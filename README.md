@@ -66,4 +66,8 @@ Found more well-made grid-based website.
 
 ## 2021. Feb. 13th
 
-- [ ] Forti Goods [https://fortigoods.com/](https://fortigoods.com/)
+- [x] Forti Goods [https://fortigoods.com/](https://fortigoods.com/)
+
+## 2021. Feb. 18th
+
+- [ ] Mindsparkle Mag [https://mindsparklemag.com/?websites/2013/01/19/marianne-brandt-wettbewer_html](https://mindsparklemag.com/?websites/2013/01/19/marianne-brandt-wettbewer_html)

@@ -1,31 +1,21 @@
-const clock = document.querySelector('.js-clock');
+const SHOWING_CN = 'showing';
+const firstSlide = document.querySelector('.slider-item:first-child');
 
-const SHORT_CN = 'short';
-let now = new Date();
-let minutes = now.getMinutes();
-let hours = now.getHours();
+const rightBtn = document.querySelector('.btn-right');
+const leftBtn = document.querySelector('.btn-left');
 
-function getTimeNow() {
-  let timeNow = `${hours < 10 ? `0${hours}` : hours} : ${minutes < 10 ? `0${minutes}` : minutes}`;
-  if (clock.classList.contains('short')) {
-    clock.innerHTML = `${timeNow} KST`;
-  } else {
-    if (hours >= 0 && hours < 13) {
-      clock.innerHTML = `${timeNow} AM KST`;
+function slide() {
+  const currentSlide = document.querySelector(`.${SHOWING_CN}`);
+  if (currentSlide) {
+    currentSlide.classList.remove(SHOWING_CN);
+    const nextSlide = currentSlide.nextElementSibling;
+    if (nextSlide) {
+      nextSlide.classList.add(SHOWING_CN);
     } else {
-      clock.innerHTML = `${timeNow} PM KST`;
+      firstSlide.classList.add(SHOWING_CN);
     }
+  } else {
+    firstSlide.classList.add(SHOWING_CN);
   }
 }
-
-function toggleClockCN(e) {
-  clock.classList.toggle('short');
-}
-
-function init() {
-  getTimeNow();
-  setInterval(getTimeNow, 1000);
-  clock.addEventListener('click', toggleClockCN);
-}
-
-init();
+rightBtn.addEventListener('click', slide);
