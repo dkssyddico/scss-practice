@@ -4,9 +4,9 @@
 
 websites from nomad coder lectures and websites which found by myself ! :)
 
-You can see my result here 👉 https://dkssyddico.github.io/scss-practice/
+You can see my result here 👉 [Click Me!](https://dkssyddico.github.io/scss-practice/)
 
-Photo Source : [https://source.unsplash.com/random]
+Photo Source : [Unsplash](https://source.unsplash.com/random)
 
 | Number |                                                                                            Original Website                                                                                             |   State Date    |    End Date     | Complete |
 | :----: | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------: | :-------------: | :------: |
