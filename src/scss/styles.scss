@@ -20,448 +20,83 @@
   box-sizing: border-box;
 }
 
+@keyframes changeBgColor {
+  0% {
+    background-color: plum;
+  }
+  25% {
+    background-color: powderblue;
+  }
+  50% {
+    background-color: rosybrown;
+  }
+  75% {
+    background-color: seashell;
+  }
+  100% {
+    background-color: lavender;
+  }
+}
+
 body {
   width: 100%;
   height: 100vh;
   font-family: 'Crimson Text', serif;
-  background-color: $mainBeige;
-}
-
-a {
-  all: unset;
+  animation: changeBgColor 15s ease-in-out infinite;
 }
 
 .nav {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  padding: 15px;
-  align-items: center;
-  text-transform: uppercase;
-  border-bottom: 1px $mainGreen solid;
-  max-height: 60px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  background-color: $mainBeige;
-  .nav-menu__left {
-    ul {
-      display: flex;
-      li {
-        margin-right: 14px;
-        font-size: $fontMicro;
-      }
-    }
-  }
-  .nav-company {
+  transition: all 0.3s;
+  .nav-wrapper {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    h1 {
-      font-size: $fontRegular;
-      text-transform: uppercase;
-      font-weight: $weightBold;
-      letter-spacing: 2px;
-    }
-  }
-  .nav-menu__right {
-    ul {
-      display: flex;
-      justify-content: flex-end;
-      li {
-        margin-right: 14px;
-        font-size: $fontMicro;
-      }
-    }
-  }
-}
-
-.header {
-  margin-top: 50px;
-  height: 110vh;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  border-bottom: 1px $mainGreen solid;
-  .header-pic {
-    @extend %backgroundPic;
-    background-image: url('https://cdn.shopify.com/s/files/1/0246/2508/6498/files/fmiller_46271da1-e360-4cb3-b6de-9610422cf826_1200x1320_crop_center.jpg?v=1587535580');
-    div {
-      color: white;
-      font-size: $fontRegular;
-      cursor: pointer;
-      width: 36px;
-      height: 36px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-radius: 50%;
-      transition: border 30s ease-in-out;
-      &:hover {
-        border: 1px solid white;
-      }
-    }
-    .num:first-child {
-      transform: translateX(200px) translateY(150px);
-    }
-    .num:nth-child(2) {
-      transform: translateX(240px) translateY(210px);
-    }
-    .num:nth-child(3) {
-      transform: translateX(220px) translateY(0px);
-    }
-    .num:nth-child(4) {
-      transform: translateX(70px) translateY(85px);
-    }
-    .num:last-child {
-      transform: translateX(150px) translateY(-120px);
-    }
-  }
-  .header-text {
-    background-color: $mainGreen;
-    color: $mainBeige;
-    padding: 25px;
-    display: flex;
-    flex-direction: column;
+    padding: 36px;
     justify-content: space-between;
-    h5 {
-      font-size: $fontRegular;
-      text-transform: uppercase;
-    }
-    .centerTextBox {
-      align-self: center;
-      text-align: center;
-      h4 {
-        font-size: $fontLarge;
-      }
-      p {
-        font-size: $fontMedium;
-        letter-spacing: 1px;
-      }
-    }
-    .text-bottom {
-      width: 95%;
-      line-height: 1.3;
-      font-size: $fontSmall;
-      letter-spacing: 1px;
-    }
-  }
-}
-
-.face-collection {
-  height: 220vh;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  background-color: $mainGreen;
-  gap: 1px;
-  border-bottom: 1px $mainGreen solid;
-  color: $mainGreen;
-  .face-info {
-    padding: 20px;
-    background-color: $mainBeige;
-    display: flex;
-    font-size: $fontLarge;
     h2 {
-      margin-right: 70px;
-      text-transform: uppercase;
-    }
-    a {
-      @extend %link;
-    }
-  }
-  .face-items {
-    padding: 20px;
-    background-color: $mainBeige;
-    text-transform: uppercase;
-    display: flex;
-    flex-direction: column;
-    h5 {
-      margin-bottom: 10px;
-    }
-    .item-pic {
-      align-self: center;
-      width: 80%;
-      height: 80%;
-      cursor: pointer;
-      @extend %backgroundPic;
-      background-image: url('https://cdn.shopify.com/s/files/1/0246/2508/6498/products/190715FMill_SHOT1_0047_1600x1600_crop_center.png?v=1563949936');
-    }
-  }
-}
-
-.features {
-  height: 100vh;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  border-bottom: 1px $mainGreen solid;
-  .text-wrapper {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    background-color: $mainGreen;
-    gap: 1px;
-  }
-  .text-column {
-    text-transform: uppercase;
-    padding: 20px;
-    font-size: $fontRegular;
-    display: grid;
-    grid-template-rows: 0.1fr 0.8fr 1fr;
-    background-color: $mainBeige;
-    h4 {
-      margin-bottom: 15px;
-    }
-    ul {
-      li {
-        margin-bottom: 10px;
-      }
-    }
-    a {
-      align-self: flex-end;
-      @extend %link;
-    }
-  }
-  .features-pic {
-    @extend %backgroundPic;
-    background-image: url('https://cdn.shopify.com/s/files/1/0246/2508/6498/files/2_1200x1320_crop_center.jpg?v=1588026297');
-  }
-}
-
-.philosophy {
-  height: 100vh;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  background-color: $mainGreen;
-  gap: 1px;
-  border-bottom: 1px $mainGreen solid;
-  .philosophy-left {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    font-size: $fontMicro;
-    justify-content: space-between;
-    background-color: $lightGreen;
-    h6 {
-      text-transform: uppercase;
-    }
-    .philosophy-pic {
-      width: 60%;
-      height: 70%;
-      @extend %backgroundPic;
-      background-image: url('https://cdn.shopify.com/s/files/1/0246/2508/6498/files/Philosophy-2_900x1125_crop_center.jpg?v=1588031092');
-      align-self: center;
-      border: 1px $mainGreen solid;
-    }
-    p {
-      align-self: center;
-      text-align: center;
-    }
-  }
-  .philosophy-right {
-    background-color: $lightGreen;
-    padding: 20px;
-    h2 {
-      font-size: $fontLarge;
-      text-transform: uppercase;
-      margin-bottom: 20px;
-    }
-    p {
-      width: 55%;
-      font-size: $fontRegular;
-      line-height: 1.2;
-      letter-spacing: 1px;
-      margin-bottom: 20px;
-    }
-    a {
-      @extend %link;
-    }
-  }
-}
-
-.body-collection {
-  height: 220vh;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  background-color: $mainGreen;
-  gap: 1px;
-  border-bottom: 1px $mainGreen solid;
-  color: $mainGreen;
-  .body-info {
-    padding: 20px;
-    background-color: $mainBeige;
-    display: flex;
-    font-size: $fontLarge;
-    h2 {
-      margin-right: 70px;
-      text-transform: uppercase;
-    }
-    a {
-      @extend %link;
-    }
-  }
-  .body-item {
-    padding: 20px;
-    background-color: $mainBeige;
-    text-transform: uppercase;
-    display: flex;
-    flex-direction: column;
-    h5 {
-      margin-bottom: 10px;
-    }
-    .item-pic {
-      align-self: center;
-      width: 80%;
-      height: 80%;
-      cursor: pointer;
-      @extend %backgroundPic;
-      background-image: url('https://cdn.shopify.com/s/files/1/0246/2508/6498/products/201109_Fmiller_SHOT1_0059_1600x1600_crop_center.png?v=1606272406');
-    }
-  }
-}
-
-.videoSection {
-  height: 100vh;
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  background-color: $mainGreen;
-  .video-text {
-    padding: 20px;
-    color: $mainBeige;
-    h2 {
-      font-size: $fontLarge;
-      text-transform: uppercase;
-      margin-bottom: 20px;
-    }
-    a {
-      @extend %link;
-      color: $mainBeige;
-    }
-  }
-  .videoPlayer {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    .video {
-      width: 100%;
-      height: 100%;
-      video {
-        height: 100%;
-      }
-    }
-  }
-}
-
-.index {
-  height: 100vh;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  background-color: $mainGreen;
-  gap: 1px;
-  border-bottom: 1px $mainGreen solid;
-  div {
-    h2 {
-      font-size: $fontLarge;
-      text-transform: uppercase;
-    }
-  }
-  .index-column:first-child {
-    background-color: $mainBeige;
-    padding: 20px;
-    h2 {
-      margin-bottom: 10px;
-    }
-    a {
-      @extend %link;
       text-transform: capitalize;
+      font-size: $fontLarge;
+    }
+    h1 {
+      text-transform: uppercase;
+      font-size: $fontRegular;
+      letter-spacing: 6px;
+      font-family: 'Montserrat', sans-serif;
     }
   }
-  .index-num {
-    background-color: $mainGreen;
-    display: grid;
-    grid-template-rows: 1fr 4fr;
-    gap: 1px;
-    .index-title {
-      background-color: $mainBeige;
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      h5 {
-        font-size: $fontRegular;
-        text-transform: uppercase;
-      }
+}
+
+.nav.nav__top {
+  transform: translateY(-100%);
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 120px;
+  .picture {
+    width: 60%;
+    height: 100vh;
+    background-color: gainsboro;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+    h5 {
+      margin-top: 100px;
+      margin-bottom: 30px;
+      font-size: $fontSmall;
     }
-    .index-category {
-      background-color: $mainBeige;
-      padding: 20px;
-      ul {
-        li {
-          text-transform: capitalize;
-          font-size: $fontRegular;
-          margin-bottom: 10px;
-        }
-      }
+    h1 {
+      font-size: $fontXLarge;
     }
   }
+}
+
+.picture.active {
+  transform: scale(1.1);
 }
 
 .footer {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  background-color: $mainGreen;
-  gap: 1px;
-  .footer-newsletter {
-    background-color: $mainBeige;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    h2 {
-      font-size: 30px;
-      text-transform: uppercase;
-    }
-    p {
-      font-size: 24px;
-      letter-spacing: 1px;
-      margin-bottom: 10px;
-      margin-top: 10px;
-    }
-    form {
-      border-bottom: 1px solid $mainGreen;
-      input {
-        all: unset;
-        text-align: left;
-        font-size: 24px;
-        color: $mainGreen;
-      }
-    }
-  }
-  .footer-text {
-    display: grid;
-    grid-template-rows: 3.5fr 1fr;
-    background-color: $mainBeige;
-    .footer-menus {
-      padding: 20px;
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      .menu {
-        h6 {
-          text-transform: uppercase;
-          margin-bottom: 5px;
-        }
-        ul {
-          li {
-            text-transform: capitalize;
-            margin-bottom: 5px;
-          }
-        }
-      }
-    }
-    .footer-rights {
-      padding: 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-  }
+  padding: 50px;
+  display: flex;
+  justify-content: center;
 }

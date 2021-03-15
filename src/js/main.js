@@ -1,21 +1,45 @@
-const SHOWING_CN = 'showing';
-const firstSlide = document.querySelector('.slider-item:first-child');
+const nav = document.querySelector('.nav');
+const navHeight = nav.getBoundingClientRect().height;
 
-const rightBtn = document.querySelector('.btn-right');
-const leftBtn = document.querySelector('.btn-left');
-
-function slide() {
-  const currentSlide = document.querySelector(`.${SHOWING_CN}`);
-  if (currentSlide) {
-    currentSlide.classList.remove(SHOWING_CN);
-    const nextSlide = currentSlide.nextElementSibling;
-    if (nextSlide) {
-      nextSlide.classList.add(SHOWING_CN);
-    } else {
-      firstSlide.classList.add(SHOWING_CN);
-    }
+document.addEventListener('scroll', () => {
+  if (window.scrollY > navHeight) {
+    nav.classList.add('nav__top');
   } else {
-    firstSlide.classList.add(SHOWING_CN);
+    nav.classList.remove('nav__top');
   }
+});
+
+const sections = document.querySelectorAll('.picture');
+
+function debounce(func, wait = 20, immediate = true) {
+  var timeout;
+  return function () {
+    var context = this,
+      args = arguments;
+    var later = function () {
+      timeout = null;
+      if (!immediate) func.apply(context, args);
+    };
+    var callNow = immediate && !timeout;
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+    if (callNow) func.apply(context, args);
+  };
 }
-rightBtn.addEventListener('click', slide);
+
+function checkSlide() {
+  sections.forEach((section) => {
+    const sectionHeight = section.getBoundingClientRect().height;
+    const slideInAt = window.scrollY + window.innerHeight - sectionHeight / 2;
+    const imageBottom = section.offsetTop + sectionHeight;
+    const isHalfShown = slideInAt > section.offsetTop;
+    const isNotScrolledPast = window.scrollY < imageBottom;
+    if (isHalfShown && isNotScrolledPast) {
+      section.classList.add('active');
+    } else {
+      section.classList.remove('active');
+    }
+  });
+}
+
+window.addEventListener('scroll', debounce(checkSlide));
