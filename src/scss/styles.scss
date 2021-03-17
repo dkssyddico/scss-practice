@@ -20,29 +20,45 @@
   box-sizing: border-box;
 }
 
-@keyframes changeBgColor {
-  0% {
-    background-color: plum;
-  }
-  25% {
-    background-color: powderblue;
-  }
-  50% {
-    background-color: rosybrown;
-  }
-  75% {
-    background-color: seashell;
-  }
-  100% {
-    background-color: lavender;
-  }
-}
+// @keyframes changeBgColor {
+//   0% {
+//     background-color: plum;
+//   }
+//   25% {
+//     background-color: powderblue;
+//   }
+//   50% {
+//     background-color: rosybrown;
+//   }
+//   75% {
+//     background-color: seashell;
+//   }
+//   100% {
+//     background-color: lavender;
+//   }
+// }
 
 body {
   width: 100%;
   height: 100vh;
   font-family: 'Crimson Text', serif;
-  animation: changeBgColor 15s ease-in-out infinite;
+  transition: all 0.3s ease-in-out;
+}
+
+.basicBg {
+  background-color: lavender;
+}
+
+.plum {
+  background-color: plum;
+}
+
+.powderBlue {
+  background-color: powderblue;
+}
+
+.rosyBrown {
+  background-color: rosybrown;
 }
 
 .nav {
@@ -83,7 +99,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.3s linear;
     padding: 30px;
     @extend %backgroundPic;
     background-image: url('https://source.unsplash.com/random/');
