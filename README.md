@@ -4,6 +4,10 @@
 
 websites from nomad coder lectures and websites which found by myself ! :)
 
+Try to clone awesome websites as far as I can.
+
+and add simple or complex(sometimes) JS code !
+
 You can see my result here 👉 [Click Me!](https://dkssyddico.github.io/scss-practice/)
 
 Photo Source : [Unsplash](https://source.unsplash.com/random)
@@ -28,4 +32,5 @@ Photo Source : [Unsplash](https://source.unsplash.com/random)
 |   14   |                                                                           [https://fortigoods.com/](https://fortigoods.com/)                                                                            | 2021. Feb. 13th | 2021. Feb. 13th |    ✅    |
 |   15   |                                                    [Mindsparkle Mag](https://mindsparklemag.com/?websites/2013/01/19/marianne-brandt-wettbewer_html)                                                    | 2021. Feb. 18th | 2021. Feb. 18th |    ✅    |
 |   16   |                                                                                [F.Miller](https://fmillerskincare.com/)                                                                                 | 2021. Mar. 7th  | 2021. Mar. 9th  |    ✅    |
-|   17   |                                                                                [martaferri](https://www.martaferri.com/)                                                                                | 2021. Mar. 15th |                 |          |
+|   17   |                                                                                [martaferri](https://www.martaferri.com/)                                                                                | 2021. Mar. 15th | 2021. Mar. 17th |    ✅    |
+|   18   |                                                                      [https://www.chloeford.co.uk/](https://www.chloeford.co.uk/)                                                                       | 2021. Mar. 18th |                 |          |
