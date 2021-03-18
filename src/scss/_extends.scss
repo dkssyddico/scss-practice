@@ -14,3 +14,22 @@
   cursor: pointer;
   color: black;
 }
+
+%highlight {
+  background-color: #f1fe9a;
+  padding: 6px 18px;
+  border-top-right-radius: 25px;
+  border-top-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+%tag {
+  padding: 2px 16px;
+  border: 1px black solid;
+  text-transform: uppercase;
+  font-size: 14px;
+  margin-right: 10px;
+}
