@@ -24,6 +24,7 @@ body {
   width: 100%;
   height: 100vh;
   font-family: 'Open Sans', sans-serif;
+  position: relative;
 }
 
 p {
@@ -60,7 +61,7 @@ a {
   max-height: 70px;
   top: 0;
   left: 0;
-  z-index: 2;
+  z-index: 1;
   .nav-column:first-child {
     display: flex;
     font-size: $fontMedium;
@@ -99,6 +100,61 @@ a {
       &:hover {
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
       }
+    }
+  }
+}
+
+.hiddenMenu {
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  background-color: white;
+  display: none;
+  .hiddenMenu-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    .menus {
+      grid-row: span 2;
+      background-color: $khaki;
+      padding: 30px;
+      #exitBtn {
+        font-size: 60px;
+        color: white;
+        cursor: pointer;
+      }
+      .menulist {
+        .menu {
+          text-transform: capitalize;
+          font-size: 80px;
+          color: white;
+          cursor: pointer;
+          letter-spacing: 1px;
+          font-style: italic;
+          &:hover {
+            color: $lightYellow;
+          }
+        }
+        .menu:first-child {
+          color: $lightYellow;
+        }
+      }
+    }
+    .topPic {
+      grid-column: span 2;
+      @extend %backgroundPic;
+      background-image: url('https://source.unsplash.com/random/10');
+    }
+    .smallpic-left {
+      @extend %backgroundPic;
+      background-image: url('https://source.unsplash.com/random/13');
+    }
+    .smallpic-right {
+      @extend %backgroundPic;
+      background-image: url('https://source.unsplash.com/random/12');
     }
   }
 }
@@ -228,6 +284,10 @@ header {
         background-image: url('https://source.unsplash.com/random/4');
         border-radius: 25px;
         margin-bottom: 30px;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+          filter: grayscale(70%);
+        }
       }
       .project-tags {
         margin-bottom: 30px;
@@ -248,6 +308,7 @@ header {
       .viewProject {
         text-transform: capitalize;
         text-decoration: underline;
+        cursor: pointer;
       }
     }
   }
@@ -259,6 +320,11 @@ header {
     background-color: $lightYellow;
     border-radius: 25px;
     padding: 2px 0;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
     .highlight {
       font-size: 14px;
       letter-spacing: 1px;
@@ -306,10 +372,15 @@ header {
 
 .social {
   padding: 90px 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   .social-texts {
     margin-bottom: 50px;
+    align-self: flex-start;
   }
   .social-pics {
+    width: 100%;
     height: 200px;
     margin-bottom: 100px;
     .pic-card {
@@ -317,34 +388,43 @@ header {
       grid-template-columns: repeat(5, 1fr);
       gap: 20px;
       height: 100%;
+      cursor: pointer;
       .pic {
         width: 100%;
         height: 100%;
         @extend %backgroundPic;
         background-image: url('https://source.unsplash.com/random/6');
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        transition: all 0.3s ease-in-out;
+        position: relative;
+        &:hover {
+          filter: blur(0.9px);
+        }
         i {
           color: white;
           font-size: 28px;
+          position: absolute;
+          top: calc(50% - 14px);
+          left: calc(50% - 14px);
         }
       }
     }
   }
-  .social-menus-box {
-    .menu-list {
-      margin-bottom: 30px;
-      display: flex;
-      justify-content: center;
-      li {
-        padding: 0 10px;
-        &:hover {
-          background-color: $lightYellow;
-        }
+
+  .menu-list {
+    margin-bottom: 30px;
+    width: 70%;
+    text-align: center;
+    a {
+      display: inline-block;
+      margin: 10px 0;
+      padding: 0 10px;
+      cursor: pointer;
+      &:hover {
+        background-color: $lightYellow;
       }
     }
   }
+
   .social-title {
     text-align: center;
     margin-bottom: 30px;
@@ -356,5 +436,148 @@ header {
     text-align: center;
     text-transform: uppercase;
     font-size: 14px;
+  }
+}
+
+// responsive web
+@media screen and (max-width: 760px) {
+  .nav {
+    width: 100%;
+  }
+  .nav-right {
+    display: none;
+  }
+  // header
+  .header {
+    height: 125vh;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    .header-texts {
+      h3 {
+        font-size: 28px;
+      }
+      p {
+        font-size: 16px;
+      }
+    }
+    .header-pic {
+      width: 80%;
+      height: 400px;
+      align-self: center;
+    }
+  }
+  // brand
+  .brand {
+    height: 120vh;
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    .brand-pic {
+      order: 2;
+      width: 90%;
+      height: 280px;
+      align-self: center;
+    }
+    .brand-texts {
+      h3 {
+        font-size: 40px;
+      }
+    }
+  }
+  // vision
+  .vision {
+    height: 120vh;
+    display: flex;
+    flex-direction: column;
+    .vision-pic {
+      height: 45%;
+    }
+    .vision-texts {
+      height: 65%;
+      padding: 60px 0;
+      .textBox {
+        h2 {
+          font-size: 32px;
+        }
+        h3 {
+          font-size: 52px;
+        }
+      }
+    }
+  }
+  // projects
+  .projects {
+    height: 420vh;
+    padding: 60px 30px;
+    .project-title {
+      margin-bottom: 30px;
+    }
+    .projects-gallery {
+      gap: 40px;
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+    }
+  }
+  // service
+  .service {
+    padding: 50px;
+    height: 120vh;
+    display: flex;
+    flex-direction: column;
+    .service-pic {
+      width: 80%;
+      height: 500px;
+      align-self: flex-end;
+    }
+    .service-texts {
+      padding: 30px;
+      .text-area {
+        .text-bold {
+          font-size: 40px;
+        }
+        .text-italic {
+          font-size: 24px;
+        }
+      }
+    }
+  }
+
+  // social
+  .social {
+    height: 150vh;
+    padding: 60px 30px 30px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .social-texts {
+      align-self: flex-start;
+      h3 {
+        font-size: 24px;
+      }
+      h2 {
+        font-size: 32px;
+      }
+    }
+    .social-pics {
+      width: 100%;
+      height: 100%;
+      margin-bottom: 50px;
+      .pic-card {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        .pic:last-child {
+          display: none;
+        }
+      }
+    }
+
+    .menu-list {
+      width: 90%;
+      a {
+        font-size: 12px;
+      }
+    }
   }
 }
