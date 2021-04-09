@@ -11,6 +11,7 @@
 // font-family: 'Playfair Display', serif;
 // font-family: 'Comfortaa', cursive;
 // font-family: 'Crimson Text', serif;
+// font-family: 'Nunito', sans-serif;
 
 @import '_reset';
 @import '_variables';
@@ -23,561 +24,197 @@
 body {
   width: 100%;
   height: 100vh;
-  font-family: 'Open Sans', sans-serif;
-  position: relative;
-}
-
-p {
-  font-size: $fontRegular;
+  font-family: 'Nunito', sans-serif;
 }
 
 a {
   all: unset;
-  color: black;
-}
-
-.text-italic {
-  font-size: $fontLarge;
-  font-style: italic;
-}
-
-.text-bold {
-  font-size: $fontXLarge;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-.highlight {
-  @extend %highlight;
 }
 
 .nav {
-  padding: 20px 20px 20px 50px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  padding: 40px;
   position: fixed;
   width: 100%;
-  max-height: 70px;
   top: 0;
   left: 0;
   z-index: 1;
-  .nav-column:first-child {
+  .nav-container {
+    width: 100%;
     display: flex;
-    font-size: $fontMedium;
-    i {
-      cursor: pointer;
-    }
-    .title {
-      transform: translateX(20px);
-      text-transform: uppercase;
-      font-weight: $weightBold;
-    }
-  }
-  .nav-menus {
-    display: flex;
-    background-color: white;
-    align-items: center;
-    padding: 8px;
-    border-top-right-radius: 25px;
-    border-top-left-radius: 25px;
-    border-bottom-right-radius: 25px;
-    border-bottom-left-radius: 25px;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    li {
-      cursor: pointer;
-      margin: 0px 15px;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      font-size: 14px;
-      padding: 6px 18px;
-      border-radius: 25px;
-      &:hover {
-        background-color: $lightYellow;
-      }
-    }
-    .highlight {
-      &:hover {
-        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    justify-content: space-between;
+    font-size: $fontRegular;
+    font-weight: 600;
+    .nav-menu {
+      display: flex;
+      h1 {
+        transform: translateX(-50px);
       }
     }
   }
 }
 
-.hiddenMenu {
-  height: 100vh;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 3;
-  background-color: white;
-  display: none;
-  .hiddenMenu-wrapper {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    .menus {
-      grid-row: span 2;
-      background-color: $khaki;
-      padding: 30px;
-      #exitBtn {
-        font-size: 60px;
-        color: white;
-        cursor: pointer;
-      }
-      .menulist {
-        .menu {
+.header {
+  height: 130vh;
+  background-color: violet;
+  padding: 40px;
+  display: flex;
+  align-items: flex-end;
+  @extend %backgroundPic;
+  // background-image: url('https://source.unsplash.com/random/1');
+  .header-texts {
+    .header-text {
+      font-size: $fontXLarge;
+      line-height: 1.5;
+    }
+    .header-creator {
+      margin-top: 10px;
+      font-size: $fontSmall;
+      text-transform: capitalize;
+    }
+  }
+}
+
+.main {
+  padding: 100px;
+  .main-container {
+    .main-texts {
+      display: grid;
+      grid-template-columns: 5fr 2fr;
+      .main-text-left {
+        .main-creator {
+          font-size: $fontSmall;
           text-transform: capitalize;
-          font-size: 80px;
-          color: white;
-          cursor: pointer;
-          letter-spacing: 1px;
-          font-style: italic;
-          &:hover {
-            color: $lightYellow;
+        }
+        .main-text__long {
+          margin: 30px 0 80px 0;
+          width: 80%;
+          line-height: 1.5;
+          font-size: $fontRegular;
+        }
+        .main-link {
+          color: gray;
+        }
+      }
+      .main-text-right {
+        text-transform: capitalize;
+        .list-name {
+          font-size: $fontSmall;
+          margin-bottom: 30px;
+        }
+        .lists {
+          li {
+            margin-bottom: 10px;
+            color: slategrey;
           }
         }
-        .menu:first-child {
-          color: $lightYellow;
-        }
       }
-    }
-    .topPic {
-      grid-column: span 2;
-      @extend %backgroundPic;
-      background-image: url('https://source.unsplash.com/random/10');
-    }
-    .smallpic-left {
-      @extend %backgroundPic;
-      background-image: url('https://source.unsplash.com/random/13');
-    }
-    .smallpic-right {
-      @extend %backgroundPic;
-      background-image: url('https://source.unsplash.com/random/12');
     }
   }
 }
 
-header {
-  background-color: $violet;
-  height: 95vh;
-  padding: 60px 120px 60px 120px;
-  display: grid;
-  grid-template-columns: 1.8fr 1.3fr;
-  gap: 60px;
-  .header-texts {
-    color: white;
-    padding: 60px 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    h2 {
-      font-size: 60px;
-    }
-    h3 {
-      font-size: 40px;
-      line-height: 1.1;
-      margin-bottom: 40px;
-    }
-    p {
-      line-height: 1.5;
-    }
-  }
-  .header-pic {
+.gallery__big {
+  height: 100vh;
+  padding: 0 100px 100px 100px;
+  .gallery-image {
+    width: 100%;
+    height: 100%;
     @extend %backgroundPic;
     background-image: url('https://source.unsplash.com/random/1');
-    border-radius: 25px;
-    transform: rotate(6deg);
   }
 }
 
-.moving-text {
-  padding: 14px 0;
-}
-
-.brand {
-  height: 110vh;
-  background-color: $lightPink;
-  padding: 120px 190px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 80px;
-  .brand-pic {
-    @extend %backgroundPic;
-    background-image: url('https://source.unsplash.com/random/2');
-    border-radius: 25px;
-    transform: rotate(-6deg);
-  }
-  .brand-texts {
-    h3 {
-      font-size: 50px;
-    }
-    .first-paragraph {
-      margin: 30px 0;
-    }
-    .second-paragraph {
-      margin-bottom: 30px;
-    }
-    p {
-      line-height: 1.5;
-      font-size: 15px;
-    }
-    .highlight {
-      font-size: 14px;
-      letter-spacing: 1px;
-      padding: 6px 30px;
-    }
-  }
-}
-
-.vision {
-  height: 80vh;
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  background-color: $orange;
-  .vision-pic {
-    @extend %backgroundPic;
-    background-image: url('https://source.unsplash.com/random/3');
-  }
-  .vision-texts {
-    padding: 60px;
-    display: flex;
-    color: white;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    text-align: center;
-    .textBox {
-      h2 {
-        font-size: 40px;
-      }
-      h3 {
-        font-size: 60px;
-      }
+.gallery__small {
+  height: 100vh;
+  padding: 0 100px 100px 100px;
+  .gallery-container {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    .gallery-image__small {
+      @extend %backgroundPic;
+      background-image: url('https://source.unsplash.com/random/2');
     }
   }
 }
 
 .projects {
-  height: 250vh;
-  background-color: $ivory;
-  padding: 100px 60px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  .project-title {
-    text-align: center;
-  }
-  .projects-gallery {
-    width: 90%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 80px;
-    .project-card {
-      cursor: pointer;
-      .project-pic {
-        @extend %backgroundPic;
-        height: 450px;
-        background-image: url('https://source.unsplash.com/random/4');
-        border-radius: 25px;
-        margin-bottom: 30px;
-        transition: all 0.3s ease-in-out;
-        &:hover {
-          filter: grayscale(70%);
-        }
-      }
-      .project-tags {
-        margin-bottom: 30px;
-        .tag {
-          @extend %tag;
-        }
-      }
-      .text-bold-small {
-        text-transform: uppercase;
-        font-weight: $weightBold;
-        font-size: $fontMedium;
-        margin-bottom: 15px;
-      }
-      .project-des {
-        font-size: 16px;
-        margin-bottom: 15px;
-      }
-      .viewProject {
-        text-transform: capitalize;
-        text-decoration: underline;
-        cursor: pointer;
-      }
-    }
-  }
-  .projects-more {
-    width: 90%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: $lightYellow;
-    border-radius: 25px;
-    padding: 2px 0;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    &:hover {
-      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    }
-    .highlight {
-      font-size: 14px;
-      letter-spacing: 1px;
-      padding: 6px 30px;
-    }
-  }
-}
-
-.service {
-  height: 110vh;
-  background-color: $violet;
-  padding: 100px 120px;
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 40px;
-  .service-pic {
-    @extend %backgroundPic;
-    background-image: url('https://source.unsplash.com/random/5');
-    border-radius: 25px;
-    transform: rotate(-6deg);
-  }
-  .service-texts {
-    text-align: center;
-    padding: 80px 0;
-    .text-area {
-      color: white;
-      margin-bottom: 60px;
-      .text-bold {
-        font-size: 60px;
-      }
-      .text-italic {
-        font-size: 40px;
-        margin: 10px 0;
-      }
-    }
-    .link-area {
-      a {
-        font-size: 14px;
-        letter-spacing: 1px;
-        padding: 6px 30px;
-      }
-    }
-  }
-}
-
-.social {
-  padding: 90px 120px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  .social-texts {
-    margin-bottom: 50px;
-    align-self: flex-start;
-  }
-  .social-pics {
+  padding: 40px 60px;
+  background-color: black;
+  height: 100vh;
+  .projects-container {
     width: 100%;
-    height: 200px;
-    margin-bottom: 100px;
-    .pic-card {
+    height: 100%;
+    display: grid;
+    grid-template-rows: 0.7fr 4fr;
+    color: white;
+    .projects-title {
+      align-self: center;
+      justify-self: center;
+      font-size: $fontMedium;
+      text-transform: uppercase;
+    }
+    .project-cards {
       display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 20px;
-      height: 100%;
-      cursor: pointer;
-      .pic {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      align-items: center;
+      .project {
         width: 100%;
         height: 100%;
-        @extend %backgroundPic;
-        background-image: url('https://source.unsplash.com/random/6');
-        transition: all 0.3s ease-in-out;
-        position: relative;
-        &:hover {
-          filter: blur(0.9px);
+        padding: 30px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        .project-img {
+          width: 80%;
+          height: 80%;
+          @extend %backgroundPic;
+          background-image: url('https://source.unsplash.com/random/3');
         }
-        i {
-          color: white;
-          font-size: 28px;
-          position: absolute;
-          top: calc(50% - 14px);
-          left: calc(50% - 14px);
+
+        .project-title {
+          font-size: $fontRegular;
+        }
+        .project-description {
+          text-transform: capitalize;
+        }
+      }
+      .project-different {
+        height: 60%;
+        .project-title {
+          margin: 20px 0;
         }
       }
     }
-  }
-
-  .menu-list {
-    margin-bottom: 30px;
-    width: 70%;
-    text-align: center;
-    a {
-      display: inline-block;
-      margin: 10px 0;
-      padding: 0 10px;
-      cursor: pointer;
-      &:hover {
-        background-color: $lightYellow;
-      }
-    }
-  }
-
-  .social-title {
-    text-align: center;
-    margin-bottom: 30px;
-    font-size: 60px;
-    text-transform: uppercase;
-    font-weight: $weightBold;
-  }
-  .social-right {
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 14px;
   }
 }
 
-// responsive web
-@media screen and (max-width: 760px) {
-  .nav {
-    width: 100%;
-  }
-  .nav-right {
-    display: none;
-  }
-  // header
-  .header {
-    height: 125vh;
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    .header-texts {
-      h3 {
-        font-size: 28px;
-      }
-      p {
-        font-size: 16px;
-      }
-    }
-    .header-pic {
-      width: 80%;
-      height: 400px;
-      align-self: center;
+.footer {
+  height: 40vh;
+  padding: 50px 30px 30px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: $fontMedium;
+  justify-content: space-between;
+  .footer-text {
+    text-align: center;
+    line-height: 1.3;
+    .link {
+      color: black;
+      cursor: pointer;
     }
   }
-  // brand
-  .brand {
-    height: 120vh;
-    padding: 60px 20px;
-    display: flex;
-    flex-direction: column;
-    .brand-pic {
-      order: 2;
-      width: 90%;
-      height: 280px;
-      align-self: center;
-    }
-    .brand-texts {
-      h3 {
-        font-size: 40px;
-      }
-    }
-  }
-  // vision
-  .vision {
-    height: 120vh;
-    display: flex;
-    flex-direction: column;
-    .vision-pic {
-      height: 45%;
-    }
-    .vision-texts {
-      height: 65%;
-      padding: 60px 0;
-      .textBox {
-        h2 {
-          font-size: 32px;
-        }
-        h3 {
-          font-size: 52px;
-        }
-      }
-    }
-  }
-  // projects
-  .projects {
-    height: 420vh;
-    padding: 60px 30px;
-    .project-title {
-      margin-bottom: 30px;
-    }
-    .projects-gallery {
-      gap: 40px;
-      grid-template-columns: repeat(1, 1fr);
-      grid-template-rows: repeat(4, 1fr);
-    }
-  }
-  // service
-  .service {
-    padding: 50px;
-    height: 120vh;
-    display: flex;
-    flex-direction: column;
-    .service-pic {
-      width: 80%;
-      height: 500px;
-      align-self: flex-end;
-    }
-    .service-texts {
-      padding: 30px;
-      .text-area {
-        .text-bold {
-          font-size: 40px;
-        }
-        .text-italic {
-          font-size: 24px;
-        }
-      }
-    }
-  }
-
-  // social
-  .social {
-    height: 150vh;
-    padding: 60px 30px 30px 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    .social-texts {
-      align-self: flex-start;
-      h3 {
-        font-size: 24px;
-      }
-      h2 {
-        font-size: 32px;
-      }
-    }
-    .social-pics {
-      width: 100%;
-      height: 100%;
-      margin-bottom: 50px;
-      .pic-card {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        .pic:last-child {
-          display: none;
-        }
-      }
-    }
-
-    .menu-list {
-      width: 90%;
-      a {
-        font-size: 12px;
-      }
+  .footer-socials {
+    a {
+      margin-right: 10px;
+      color: black;
+      font-size: $fontRegular;
+      letter-spacing: 1px;
+      cursor: pointer;
     }
   }
 }
