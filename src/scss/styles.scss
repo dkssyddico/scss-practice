@@ -30,3 +30,247 @@ body {
 a {
   all: unset;
 }
+
+.nav {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  color: white;
+  gap: 1px;
+  border-bottom: 1px white solid;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  .nav-column {
+    background-color: transparent;
+    border-right: 1px white solid;
+    .nav-column-container {
+      margin: 20px 30px;
+      font-size: $fontSmall;
+      text-transform: uppercase;
+      i {
+        margin-right: 16px;
+      }
+    }
+  }
+  .nav-left {
+    .nav-column-container {
+      display: flex;
+      align-items: center;
+    }
+  }
+  .nav-right {
+    .nav-column-container {
+      .nav-menus {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        li {
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+}
+
+.header {
+  .header-container {
+    .header-title-box {
+      padding: 30px;
+      height: 100vh;
+      @extend %backgroundPic;
+      background-image: url('https://source.unsplash.com/random/1');
+      text-align: center;
+      h1 {
+        color: white;
+        transform: translateY(70px);
+        font-size: 210px;
+        font-weight: $weightBold;
+      }
+    }
+    .header-bottom-box {
+      .bottom-container {
+        height: 40vh;
+        margin: 0 30px;
+        // padding-bottom: 30px;
+        border-bottom: 1px solid black;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        .header-texts-left {
+          color: $yellow;
+          text-transform: uppercase;
+          h5 {
+            transform: translateY(-120px);
+          }
+          h2 {
+            transform: translateY(-95px);
+            font-size: 80px;
+            font-weight: $weightBold;
+          }
+          p {
+            color: black;
+            font-size: $fontMicro;
+            line-height: 1.5;
+            span {
+              font-style: italic;
+            }
+          }
+        }
+        .header-texts-right {
+          padding: 20px 0;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          .texts-top {
+            font-size: $fontRegular;
+            font-weight: $weightBold;
+          }
+          .texts-bottom {
+            line-height: 1.5;
+          }
+        }
+      }
+    }
+  }
+}
+
+.music {
+  height: 100vh;
+  padding: 30px 0;
+  .music-container {
+    margin: 0 30px;
+    display: grid;
+    grid-template-columns: 3fr 1.5fr;
+    gap: 1px;
+    background-color: black;
+    border-bottom: 1px solid black;
+    height: 100%;
+    .mixes-box {
+      padding-bottom: 30px;
+      background-color: white;
+      .mixes-title-box {
+        height: 15%;
+        padding-right: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        i {
+          font-size: $fontRegular;
+        }
+        h2 {
+          text-transform: uppercase;
+          font-size: $fontLarge;
+          transform: translateX(-85px);
+          font-weight: $weightBold;
+        }
+        p {
+          text-transform: capitalize;
+          line-height: 1.5;
+          transform: translateX(-120px);
+        }
+        a {
+          text-transform: uppercase;
+          color: black;
+        }
+      }
+      .mixes-carousel-box {
+        height: 85%;
+        display: flex;
+        justify-content: space-between;
+        padding-right: 30px;
+        align-items: center;
+        button {
+          all: unset;
+          font-size: $fontMedium;
+        }
+        .mixes-carousel-list {
+          width: 100%;
+          height: 100%;
+          li {
+            width: 100%;
+            height: 100%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            .small-card {
+              padding: 30px;
+              padding-top: 0;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              display: grid;
+              grid-template-rows: 6fr 3fr 1fr;
+              text-align: center;
+              .card-img {
+                width: 100%;
+                height: 100%;
+                @extend %backgroundPic;
+                background-image: url('https://source.unsplash.com/random/2');
+              }
+              .card-title {
+                font-size: $fontMedium;
+              }
+              a {
+                justify-self: center;
+                width: 40%;
+                text-transform: uppercase;
+                color: black;
+                padding: 10px 20px;
+                border: 1px solid black;
+                border-top-left-radius: 24px;
+                border-bottom-left-radius: 24px;
+                border-bottom-right-radius: 24px;
+                border-top-right-radius: 24px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .comingSoon-box {
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0 60px;
+      overflow: scroll;
+      .comingSoon-title {
+        text-transform: uppercase;
+        margin-bottom: 30px;
+      }
+      .comingSoon-cards {
+        width: 100%;
+        .comingSoon-card {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          width: 100%;
+          margin-bottom: 30px;
+          h2 {
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            font-family: 'Crimson Text', serif;
+            font-size: $fontLarge;
+          }
+          .card-img {
+            width: 100%;
+            @extend %backgroundPic;
+            background-image: url('https://source.unsplash.com/random/3');
+            height: 100px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            h3 {
+              font-size: $fontMedium;
+              color: white;
+              text-transform: uppercase;
+              font-weight: $weightBold;
+            }
+          }
+        }
+      }
+    }
+  }
+}
