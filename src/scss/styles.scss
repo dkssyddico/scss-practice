@@ -212,15 +212,10 @@ a {
               }
               a {
                 justify-self: center;
-                width: 40%;
-                text-transform: uppercase;
                 color: black;
-                padding: 10px 20px;
                 border: 1px solid black;
-                border-top-left-radius: 24px;
-                border-bottom-left-radius: 24px;
-                border-bottom-right-radius: 24px;
-                border-top-right-radius: 24px;
+                width: 40%;
+                @extend %button;
               }
             }
           }
@@ -272,5 +267,175 @@ a {
         }
       }
     }
+  }
+}
+
+.discovery {
+  height: 100vh;
+  padding: 70px 60px;
+  @extend %backgroundPic;
+  background-image: url('https://source.unsplash.com/random/4');
+  .discovey-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+    h3 {
+      font-weight: $weightBold;
+      font-size: $fontXLarge;
+    }
+    p {
+      font-weight: $weightSemiBold;
+      font-size: $fontMedium;
+    }
+    a {
+      border: 1px solid white;
+      color: white;
+      @extend %button;
+      width: 10%;
+      text-align: center;
+    }
+  }
+}
+
+.features {
+  height: 110vh;
+  padding: 60px 30px;
+  .features-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .features-title-box {
+      display: flex;
+      justify-content: space-between;
+      h2 {
+        text-transform: uppercase;
+        font-size: $fontLarge;
+        font-weight: $weightBold;
+      }
+      p {
+        text-transform: capitalize;
+        line-height: 1.5;
+        transform: translateX(-270px);
+      }
+      a {
+        text-transform: uppercase;
+        color: black;
+      }
+    }
+    .features-articles {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      background-color: black;
+      gap: 1px;
+      .card-left {
+        padding-right: 20px;
+      }
+      .card-right {
+        padding-left: 20px;
+      }
+      .article-card {
+        background-color: white;
+        .article-img {
+          width: 100%;
+          height: 240px;
+          @extend %backgroundPic;
+          background-image: url('https://source.unsplash.com/random/5');
+          margin-bottom: 16px;
+        }
+        h4 {
+          font-weight: $weightBold;
+          font-size: $fontMedium;
+          margin-bottom: 20px;
+        }
+        p {
+          font-size: 16px;
+          line-height: 1.2;
+        }
+        .article-bottom {
+          margin-top: 20px;
+          display: flex;
+          justify-content: space-between;
+          .article-date {
+            font-size: $fontMicro;
+          }
+          .article-link {
+            color: black;
+            border: 1px solid black;
+            width: 20%;
+
+            @extend %button;
+          }
+        }
+      }
+    }
+  }
+}
+
+.gallery {
+  height: 100vh;
+  padding: 70px 60px;
+  @extend %backgroundPic;
+  background-image: url('https://source.unsplash.com/random/4');
+  .gallery-container {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    height: 100%;
+    width: 100%;
+    .gallery-img__big {
+      display: flex;
+      align-self: center;
+      justify-self: center;
+      width: 80%;
+      height: 80%;
+      @extend %backgroundPic;
+      background-image: url('https://source.unsplash.com/random/5');
+    }
+    .gallery_texts {
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      h3 {
+        font-size: $fontXLarge;
+        font-weight: $weightBold;
+      }
+      p {
+        font-size: $fontMedium;
+        margin: 30px 0;
+        font-weight: $weightSemiBold;
+      }
+      a {
+        color: black;
+        border: 1px solid black;
+        width: 20%;
+        text-align: center;
+        @extend %button;
+      }
+    }
+  }
+}
+
+.footer {
+  height: 70vh;
+  padding: 30px;
+  display: grid;
+  grid-template-rows: 5fr 1fr;
+  .footer-top {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    .footer-mail {
+    }
+    .footer-menus {
+      width: 100%;
+      display: flex;
+    }
+  }
+  .footer-bottom {
   }
 }

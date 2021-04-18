@@ -33,3 +33,16 @@
   font-size: 14px;
   margin-right: 10px;
 }
+
+%button {
+  // justify-self: center;
+  // color: black;
+  // border: 1px solid black;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border-top-left-radius: 24px;
+  border-bottom-left-radius: 24px;
+  border-bottom-right-radius: 24px;
+  border-top-right-radius: 24px;
+  text-align: center;
+}
