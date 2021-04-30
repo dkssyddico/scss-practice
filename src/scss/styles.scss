@@ -77,3 +77,59 @@ body {
     font-size: $fontXLarge;
   }
 }
+
+.gallery-first {
+  height: 100vh;
+  .gallery-container {
+    height: 100%;
+    margin: 30px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    border-bottom: 1px solid black;
+    .gallery-card {
+      .gallery-pic {
+        height: 30%;
+        @extend %backgroundPic;
+        background-image: url('https://source.unsplash.com/random/2');
+      }
+      .gallery-description {
+        height: max-content;
+        padding-top: 16px;
+        font-size: $fontLarge;
+      }
+      .gallery-location {
+        height: 20%;
+        padding-top: 10px;
+        font-size: $fontMicro;
+      }
+    }
+    .gallery-card:nth-child(3) {
+      .gallery-pic {
+        height: 55%;
+      }
+    }
+  }
+}
+
+.banner {
+  height: 40vh;
+  padding-bottom: 30px;
+  border-bottom: 1px solid black;
+  .banner-container {
+    height: 100%;
+    margin: 20px 30px;
+
+    @extend %backgroundPic;
+    // border-bottom: 1px solid black;
+    background-image: url('https://source.unsplash.com/random/3');
+    .banner-left {
+    }
+    .banner-right {
+      .banner-title {
+      }
+      .banner-subtitle {
+      }
+    }
+  }
+}
