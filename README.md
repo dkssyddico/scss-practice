@@ -38,4 +38,5 @@ Photo Source : [Unsplash](**https://source.unsplash.com/random**)
 |   20   |                            [https://www.waxpoetics.com/](https://www.waxpoetics.com/)                            | 2021. Apr. 11th |    ✅    |
 |   21   |                           [https://www.kinseygross.com/](https://www.kinseygross.com/)                           | 2021. Apr. 21th |    ✅    |
 |   22   |                          [https://saskiawilson.com/work](https://saskiawilson.com/work)                          | 2021. Apr. 26th |    ✅    |
-|   23   |                                 [https://materia.press/](https://materia.press/)                                 |                 |          |
+|   23   |                                 [https://materia.press/](https://materia.press/)                                 | 2021. Apr. 28th |    ✅    |
+|   23   |               [https://chicagoarchitecturebiennial.org/](https://chicagoarchitecturebiennial.org/)               | 2021. May. 3rd  |          |
