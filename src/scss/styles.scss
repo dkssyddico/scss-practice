@@ -114,12 +114,10 @@ body {
 
 .banner {
   height: 40vh;
-  padding-bottom: 30px;
+  padding: 30px;
   border-bottom: 1px solid black;
   .banner-container {
     height: 100%;
-    margin: 20px 30px;
-
     @extend %backgroundPic;
     // border-bottom: 1px solid black;
     background-image: url('https://source.unsplash.com/random/3');
@@ -131,5 +129,10 @@ body {
       .banner-subtitle {
       }
     }
+  }
+}
+
+.month-divider {
+  .month {
   }
 }
