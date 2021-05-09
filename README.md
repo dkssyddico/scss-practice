@@ -39,4 +39,5 @@ Photo Source : [Unsplash](**https://source.unsplash.com/random**)
 |   21   |                           [https://www.kinseygross.com/](https://www.kinseygross.com/)                           | 2021. Apr. 21th |    ✅    |
 |   22   |                          [https://saskiawilson.com/work](https://saskiawilson.com/work)                          | 2021. Apr. 26th |    ✅    |
 |   23   |                                 [https://materia.press/](https://materia.press/)                                 | 2021. Apr. 28th |    ✅    |
-|   23   |               [https://chicagoarchitecturebiennial.org/](https://chicagoarchitecturebiennial.org/)               | 2021. May. 3rd  |    ✅    |
+|   24   |               [https://chicagoarchitecturebiennial.org/](https://chicagoarchitecturebiennial.org/)               | 2021. May. 3rd  |    ✅    |
+|   25   |                     [https://wedgegallery.woodbury.edu/](https://wedgegallery.woodbury.edu/)                     | 2021. May. 9th  |          |
